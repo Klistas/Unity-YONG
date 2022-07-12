@@ -17,18 +17,17 @@ public class HeliInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-     Up = Down = Right = Left = false;
+        Up = Down = Right = Left = false;
    
-    Up = Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W);
-    Down = Input.GetKey(KeyCode.DownArrow)||Input.GetKey(KeyCode.S);
-    Left = Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.A);
-    Right = Input.GetKey(KeyCode.RightArrow)||Input.GetKey(KeyCode.D);
+        Up = Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W);
+        Down = Input.GetKey(KeyCode.DownArrow)||Input.GetKey(KeyCode.S);
+        Left = Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.A);
+        Right = Input.GetKey(KeyCode.RightArrow)||Input.GetKey(KeyCode.D);
+
         if(Input.GetKeyDown(KeyCode.R))
         {
             OnButton = !OnButton;
         }
-   
   
     }
 }
