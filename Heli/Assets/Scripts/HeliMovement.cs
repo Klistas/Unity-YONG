@@ -7,7 +7,7 @@ public class HeliMovement : MonoBehaviour
 {
     private HeliInput _heliInput;
     private Rigidbody _rigidbody;
-
+    private PropMovement _propMovement;
    
     public float Speed = 2f;
     public float RotationSpeed = 0.5f;
@@ -18,12 +18,13 @@ public class HeliMovement : MonoBehaviour
     {
         _heliInput = GetComponent<HeliInput>();
         _rigidbody = GetComponent<Rigidbody>();
+        _propMovement = GetComponent<PropMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_heliInput.OnButton == true)
+        if (_heliInput.OnButton == true && _propMovement.PropSpeed == _propMovement.MaxPropSpeed)
         {
             _rigidbody.useGravity = false;
 
